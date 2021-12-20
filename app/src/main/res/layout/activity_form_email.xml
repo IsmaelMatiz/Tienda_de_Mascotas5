@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/titleFormEmailActivity"
+        android:textSize="50dp" />
+
+    <EditText
+        android:id="@+id/asuntoFormEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="Asunto" />
+
+    <EditText
+        android:id="@+id/mensajeFormEmail"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:padding="25dp"
+        android:hint="Dinos en que podemos ayudarte?"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:onClick="senEmail"
+        android:text="@string/textSendButton" />
+</LinearLayout>

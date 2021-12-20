@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    tools:context=".ui.sucursales.SucursalesFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contactanos"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefonos"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="322-301-4051" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="322-301-4051" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="322-301-4051" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="correoficticio@dominio.com" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="correoficticio@dominio.com" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sucursales"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="Cl. 97 ##10-46, Bogotá" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="Cl. 20 ##90-50, Bogotá" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="Para ver las ubicaciones en el mapa oprime la estrella" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

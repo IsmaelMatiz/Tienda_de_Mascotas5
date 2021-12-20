@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Tienda de mascotas</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Tienda de Mascotas</string>
+    <string name="nav_header_subtitle">Lo mejor para tu mascota</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_add">Agregar</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_productos">Productos</string>
+    <string name="menu_servicios">Servicios</string>
+    <string name="menu_contactos">Contactos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Locura-->
+
+    <!--Text Main Activity-->
+    <string name="itemProducto">Productos</string>
+    <string name="itemServicio">Servicios</string>
+    <string name="itemSucursales">Sucursales</string>
+    <string name="cremaDental">Crema Dental</string>
+    <string name="tituloComboAseo">Aseo</string>
+    <string name="tituloComboComida">Comida</string>
+    <string name="tituloComboBano">Baño</string>
+    <string name="textoComboAseo">Llevate los mejores productos de aseo para tu mascota desde Shampoo hasta un cepillo todo lo necesario para q puedas limpiar ti mascota por si solo</string>
+    <string name="agregarCarrito">Mas Info</string>
+    <string name="textoComboComidaPerro">Te Ofrecemos los productos de la mejor calidad hechos por Purina una de las Marcas mas destacadas</string>
+    <string name="verCarrito">Ver Carrito</string>
+    <string name="destacados">Combos Destacados</string>
+    <string name="textItem1ComboLavado">Lavado, Cepillado y Secado</string>
+    <string name="textItem2ComboLavado">Corte de Pelo al gusto</string>
+    <string name="DescriptionComboLavado">Nos encargamos de recoger a tu perro bañarlo, cepillarlo y cortar el pelo conforme a tus especificaciones, dejanos el lavado de tu peludo</string>
+    <string name="TextNameForm">Nombre: </string>
+    <string name="TextEmailForm">Email: </string>
+    <string name="textTitleFormMain">Suscribete a nuestro NewsLetter</string>
+    <string name="textSendButton">Enviar</string>
+
+
+    <!-- Productos -->
+    <string name="nameP1">Arena para Gato</string>
+    <string name="descriptionP1">3 Kilos</string>
+    <string name="precioP1">$30\'000.000</string>
+
+    <string name="nameP2">Cepillo para Perro</string>
+    <string name="descriptionP2">Cepillo de metal + Peinilla</string>
+    <string name="precioP2">$50\'000.000</string>
+
+    <string name="nameP3">Comida Humeda para Gato Wiskas</string>
+    <string name="descriptionP3">85 gramos</string>
+    <string name="precioP3">$5\'000.000</string>
+
+    <string name="nameP4">Shampoo para Perro</string>
+    <string name="descriptionP4">120 mililitros</string>
+    <string name="precioP4">$20\'000.000</string>
+
+
+    <!-- Servicios -->
+    <string name="nameS1">Paseo para Perros</string>
+    <string name="descriptionS1">durante 30 minutos</string>
+    <string name="precioS1">$150\'000.000 / mes</string>
+
+    <string name="nameS2">Baño para Perros</string>
+    <string name="descriptionS2">Baño + secado</string>
+    <string name="precioS2">$50\'000.000</string>
+
+    <!-- Sucursales -->
+    <string name="nameSede1">Sede Cali</string>
+    <string name="ubicacionSede1">Avenida Pasoancho #65C-22, Cali, Valle del Cauca</string>
+    <string name="codigoPostalSede1">760001</string>
+
+    <string name="nameSede2">Sede Bogota</string>
+    <string name="ubicacionSede2">Cl. 97 ##10-46, Bogotá</string>
+    <string name="codigoPostalSede2">111101</string>
+
+    <!-- Formulario Email -->
+    <string name="titleFormEmailActivity">Contactanos</string>
+
+</resources>

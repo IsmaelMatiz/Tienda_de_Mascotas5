@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    tools:context=".ui.servicios.ServiciosFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refrescoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridView
+                android:id="@+id/gridServicios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="1" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </ScrollView>
+</LinearLayout>
