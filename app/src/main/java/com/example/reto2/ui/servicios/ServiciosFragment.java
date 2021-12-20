@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,7 @@ import com.example.reto2.R;
 import com.example.reto2.adaptadores.ServicioAdapter;
 import com.example.reto2.casos_uso.CasoUsoServicio;
 import com.example.reto2.databinding.FragmentServiciosBinding;
+import com.example.reto2.datos.ApiOracle;
 import com.example.reto2.datos.DBHelper;
 import com.example.reto2.modelos.Servicio;
 import java.util.ArrayList;
@@ -28,7 +30,9 @@ public class ServiciosFragment extends Fragment {
     private String TABLE_NAME = "SERVICIOS";
     private CasoUsoServicio casoUsoService;
     private GridView gridView;
-    private DBHelper dbHelper;
+    //private DBHelper dbHelper;
+    private ApiOracle apiOracle;
+    private ProgressBar progressBar;
     private ArrayList<Servicio> servicio;
     SwipeRefreshLayout refreshLayout;;
     private FragmentServiciosBinding binding;
@@ -40,12 +44,11 @@ public class ServiciosFragment extends Fragment {
         refreshLayout = root.findViewById(R.id.refresco);
         try{
             casoUsoService = new CasoUsoServicio();
-            dbHelper = new DBHelper(getContext());
-            Cursor cursor = dbHelper.getData(TABLE_NAME);
-            servicio = casoUsoService.llenarListaServicio(cursor);
+            apiOracle = new ApiOracle(root.getContext());
             gridView = (GridView) root.findViewById(R.id.gridServicios);
-            ServicioAdapter servicioAdapter = new ServicioAdapter(root.getContext(), servicio);
-            gridView.setAdapter(servicioAdapter);
+            progressBar = (ProgressBar) root.findViewById(R.id.progressBarServicios);
+            apiOracle.getAll("SERVICIOS",gridView,progressBar);
+
         }catch (Exception e){
             Toast.makeText(getContext(), e.toString(), Toast.LENGTH_LONG).show();
         }
@@ -55,17 +58,7 @@ public class ServiciosFragment extends Fragment {
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                try{
-                    casoUsoService = new CasoUsoServicio();
-                    dbHelper = new DBHelper(getContext());
-                    Cursor cursor = dbHelper.getData(TABLE_NAME);
-                    servicio = casoUsoService.llenarListaServicio(cursor);
-                    gridView = (GridView) root.findViewById(R.id.gridServicios);
-                    ServicioAdapter servicioAdapter = new ServicioAdapter(root.getContext(), servicio);
-                    gridView.setAdapter(servicioAdapter);
-                }catch (Exception e){
-                    Toast.makeText(getContext(), e.toString(), Toast.LENGTH_LONG).show();
-                }
+
                 refreshLayout.setRefreshing(false);
             }
         });

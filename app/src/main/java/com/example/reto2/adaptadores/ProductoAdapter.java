@@ -67,7 +67,7 @@ public class ProductoAdapter extends BaseAdapter {
         imageView.setImageBitmap(bitmap);
 
         //boton favoritos mostrado en fragment productos
-        if(Integer.parseInt(producto.getFavorite()) == 1){
+        if(producto.getFavorite().equals("1")){
             imageFavorite.setImageResource(R.drawable.btn_star_on);
         }
         return convertView;

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +20,7 @@ import com.example.reto2.FormActivity;
 import com.example.reto2.R;
 import com.example.reto2.adaptadores.ProductoAdapter;
 import com.example.reto2.casos_uso.CasoUsoProducto;
+import com.example.reto2.datos.ApiOracle;
 import com.example.reto2.datos.DBHelper;
 import com.example.reto2.modelos.Producto;
 import java.util.ArrayList;
@@ -27,7 +29,9 @@ public class ProductosFragment extends Fragment {
     private String TABLE_NAME = "PRODUCTOS";
     private CasoUsoProducto casoUsoProducto;
     private GridView gridView;
-    private DBHelper dbHelper;
+    private ProgressBar progressBar;
+    //private DBHelper dbHelper;
+    private ApiOracle apiOracle;
     private ArrayList<Producto> productos;
     SwipeRefreshLayout refreshLayout;
 
@@ -37,16 +41,13 @@ public class ProductosFragment extends Fragment {
         refreshLayout = root.findViewById(R.id.refresco);
         try{
             casoUsoProducto = new CasoUsoProducto();
-            dbHelper = new DBHelper(getContext());
-            Cursor cursor = dbHelper.getData(TABLE_NAME);
-            productos = casoUsoProducto.llenarListaProductos(cursor);
+            apiOracle = new ApiOracle(root.getContext());
             gridView = (GridView) root.findViewById(R.id.gridProductos);
-            ProductoAdapter productoAdapter = new ProductoAdapter(root.getContext(), productos);
-            gridView.setAdapter(productoAdapter);
+            progressBar = (ProgressBar) root.findViewById(R.id.progressBarProductos);
+            apiOracle.getAll("PRODUCTOS",gridView,progressBar);
         }catch (Exception e){
             Toast.makeText(getContext(), e.toString(), Toast.LENGTH_LONG).show();
         }
-
         //refresco por wipe
         refreshLayout = root.findViewById(R.id.refresco);
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -54,12 +55,10 @@ public class ProductosFragment extends Fragment {
             public void onRefresh() {
                 try{
                     casoUsoProducto = new CasoUsoProducto();
-                    dbHelper = new DBHelper(getContext());
-                    Cursor cursor = dbHelper.getData(TABLE_NAME);
-                    productos = casoUsoProducto.llenarListaProductos(cursor);
+                    apiOracle = new ApiOracle(root.getContext());
                     gridView = (GridView) root.findViewById(R.id.gridProductos);
-                    ProductoAdapter productoAdapter = new ProductoAdapter(root.getContext(), productos);
-                    gridView.setAdapter(productoAdapter);
+                    progressBar = (ProgressBar) root.findViewById(R.id.progressBarProductos);
+                    apiOracle.getAll("PRODUCTOS",gridView,progressBar);
                 }catch (Exception e){
                     Toast.makeText(getContext(), e.toString(), Toast.LENGTH_LONG).show();
                 }
